@@ -1,0 +1,12 @@
+<form name="contact us" >
+    <label>NAME</label>
+    <input type="text" #name="ngModel" name="ngModel" required ngModel class="form-control">
+    <div *ngIf="name.touched && name.invalid" class="danger">
+             name is required
+    </div>
+    <label>email</label>
+    <input type="email" name="email" ngModel #email="ngModel" required class="form-control">
+    <div *ngIf="email.touched && email.invalid " class="danger">
+        email must be entered 
+    </div>
+</form>
